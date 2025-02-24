@@ -1,0 +1,557 @@
+html {
+    color: #d0d0d0;
+    /* Texto claro para contraste en fondo oscuro */
+    background-color: #1a1a1a;
+    /* Fondo oscuro */
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: calc(14px + 0.25vw);
+    line-height: 1.55;
+    font-kerning: normal;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern", "liga" 1, "calt" 0;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+figcaption,
+figure,
+main {
+    display: block;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl,
+table,
+pre {
+    margin-top: 0;
+    margin-bottom: 1.25em;
+}
+
+small {
+    font-size: 80%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+    line-height: 1.25em;
+    margin-bottom: 1.25rem;
+    margin-top: 2rem;
+    position: relative;
+    color: #e0e0e0;
+    /* Encabezados claros */
+}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+    color: #a0a0a0;
+    /* Gris claro para subtextos */
+    font-size: 0.7em;
+    font-weight: 300;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+    font-size: 0.9em;
+}
+
+h1 {
+    font-size: 2.75em;
+}
+
+h2 {
+    font-size: 2.25em;
+}
+
+h3 {
+    font-size: 1.75em;
+}
+
+h4 {
+    font-size: 1.5em;
+}
+
+h5 {
+    font-size: 1.25em;
+}
+
+h6 {
+    font-size: 1.15em;
+    color: #b0b0b0;
+    /* Gris claro para h6 */
+}
+
+p {
+    letter-spacing: -0.01em;
+}
+
+a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+    color: #1e90ff;
+    /* Azul claro para enlaces */
+    text-decoration: none;
+}
+
+a:active,
+a:hover {
+    outline-width: 0;
+    outline: 0;
+}
+
+a:active,
+a:focus,
+a:hover {
+    text-decoration: underline;
+    color: #63b3ff;
+    /* Azul más claro al interactuar */
+}
+
+ul,
+ol {
+    padding: 0;
+    padding-left: 2em;
+}
+
+ul ol,
+ol ol {
+    list-style-type: lower-roman;
+}
+
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul ul ol,
+ul ol ol,
+ol ul ol,
+ol ol ol {
+    list-style-type: lower-alpha;
+}
+
+li>p {
+    margin-top: 1em;
+}
+
+blockquote {
+    margin: 0 0 1rem;
+    padding: 0 1rem;
+    color: #a0a0a0;
+    /* Gris claro para citas */
+    border-left: 4px solid #404040;
+    /* Borde oscuro */
+}
+
+blockquote> :first-child {
+    margin-top: 0;
+}
+
+blockquote> :last-child {
+    margin-bottom: 0;
+}
+
+b,
+strong {
+    font-weight: inherit;
+    font-weight: 600;
+}
+
+mark {
+    background-color: #ffd700;
+    /* Amarillo oscuro para destacar */
+    color: #000;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+code,
+pre,
+kbd,
+samp {
+    font-family: Consolas, "Courier New", Menlo, Monaco, monospace;
+    font-size: 90%;
+}
+
+pre,
+code {
+    background-color: #2a2a2a;
+    /* Fondo oscuro para código */
+    border-radius: 3px;
+    color: #d0d0d0;
+    /* Texto claro */
+}
+
+pre {
+    overflow: auto;
+    word-wrap: normal;
+    padding: 1em;
+    line-height: 1.45;
+}
+
+pre code {
+    background: transparent;
+    display: inline;
+    padding: 0;
+    line-height: inherit;
+    word-wrap: normal;
+}
+
+pre code::before,
+pre code::after {
+    content: normal;
+}
+
+pre>code {
+    border: 0;
+    font-size: 1em;
+    white-space: pre;
+    word-break: normal;
+}
+
+code {
+    padding: 0.2em 0;
+    margin: 0;
+}
+
+code::before,
+code::after {
+    letter-spacing: -0.2em;
+    content: '\00a0';
+}
+
+kbd {
+    background-color: #333333;
+    /* Fondo oscuro para teclas */
+    background-image: linear-gradient(#404040, #333333);
+    background-repeat: repeat-x;
+    border: 1px solid #555555;
+    /* Borde gris oscuro */
+    border-radius: 2px;
+    box-shadow: 0 1px 0 #555555;
+    color: #d0d0d0;
+    /* Texto claro */
+    display: inline-block;
+    line-height: 0.95em;
+    margin: 0 1px;
+    padding: 5px 5px 1px;
+}
+
+td,
+th {
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: block;
+    width: 100%;
+    overflow: auto;
+    word-break: normal;
+    word-break: keep-all;
+}
+
+table th,
+table td {
+    padding: 6px 13px;
+    border: 1px solid #444444;
+    /* Bordes oscuros */
+}
+
+table th {
+    font-weight: bold;
+    background-color: #2a2a2a;
+    /* Fondo oscuro para encabezados */
+}
+
+table tr {
+    background-color: #1f1f1f;
+    /* Fondo oscuro para filas */
+    border-top: 1px solid #333333;
+}
+
+table tr:nth-child(2n) {
+    background-color: #252525;
+    /* Variación sutil para filas pares */
+}
+
+hr {
+    box-sizing: content-box;
+    overflow: visible;
+    background: transparent;
+    height: 4px;
+    padding: 0;
+    margin: 1em 0;
+    background-color: #404040;
+    /* Línea divisoria oscura */
+    border: 0 none;
+}
+
+hr::before {
+    display: table;
+    content: '';
+}
+
+hr::after {
+    display: table;
+    clear: both;
+    content: '';
+}
+
+img {
+    border-style: none;
+    border: 0;
+    max-width: 100%;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+figure {
+    margin: 1em 0;
+}
+
+figure img {
+    background: #1a1a1a;
+    /* Fondo oscuro para imágenes */
+    border: 1px solid #555555;
+    /* Borde gris oscuro */
+    padding: 0.25em;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 0.75em;
+    font-weight: 200;
+    margin: 0;
+    color: #a0a0a0;
+    /* Gris claro para pies de figura */
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+}
+
+dfn {
+    font-style: italic;
+}
+
+dd {
+    margin-left: 0;
+}
+
+dl {
+    padding: 0;
+}
+
+dl dt {
+    padding: 0;
+    margin-top: 1em;
+    font-size: 1em;
+    font-style: italic;
+    font-weight: 600;
+    color: #e0e0e0;
+    /* Términos claros */
+}
+
+dl dd {
+    padding: 0 1em;
+    margin-bottom: 1.25em;
+}
+
+audio,
+video {
+    display: inline-block;
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+input {
+    margin: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+    background-color: #2a2a2a;
+    /* Fondo oscuro para campos */
+    color: #d0d0d0;
+    /* Texto claro */
+    border: 1px solid #555555;
+    /* Borde oscuro */
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted #a0a0a0;
+    /* Contorno claro para foco */
+}
+
+fieldset {
+    border: 1px solid #555555;
+    /* Borde oscuro */
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+    color: #d0d0d0;
+    /* Leyenda clara */
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
+}
+
+progress {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+textarea {
+    overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+    padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+[type="search"] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+[disabled] {
+    cursor: default;
+    opacity: 0.6;
+    /* Desactivados más visibles en modo oscuro */
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+}
+
+details,
+menu {
+    display: block;
+}
+
+summary {
+    display: list-item;
+    color: #d0d0d0;
+    /* Texto claro */
+}
+
+canvas {
+    display: inline-block;
+}
+
+template {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
